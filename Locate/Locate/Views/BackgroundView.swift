@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PinBody: Shape {
+struct BackgroundBody: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -63,17 +63,28 @@ struct PinBody: Shape {
 }
 
 struct BackgroundView: View {
-    var color: Color
-    
     var body: some View {
-        PinBody()
-            .foregroundColor(color)
-            .ignoresSafeArea()
+        ZStack {
+            BackgroundBody()
+                .foregroundColor(.pewterBlue)
+                .ignoresSafeArea()
+            
+            VStack(spacing: 8) {
+                Text("Locate")
+                    .foregroundColor(.cedarChest)
+                    .font(.largeTitle)
+//                    .bold()
+                
+                Image(systemName: "globe.europe.africa.fill")
+                    .font(.system(size: 200))
+                    .foregroundColor(.cedarChest)
+            }
+        }
     }
 }
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView(color: .pewterBlue)
+        BackgroundView()
     }
 }

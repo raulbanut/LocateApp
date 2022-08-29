@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240B36A428BCC7E400E5AAB4 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B36A328BCC7E400E5AAB4 /* AuthenticationView.swift */; };
+		240B36A828BCC82B00E5AAB4 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B36A728BCC82B00E5AAB4 /* TermsView.swift */; };
 		24C515A428BCC3BB00E5F892 /* LocateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C515A328BCC3BB00E5F892 /* LocateApp.swift */; };
 		24C515A628BCC3BB00E5F892 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C515A528BCC3BB00E5F892 /* ContentView.swift */; };
 		24C515A828BCC3BD00E5F892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C515A728BCC3BD00E5F892 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240B36A328BCC7E400E5AAB4 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		240B36A728BCC82B00E5AAB4 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		24C515A028BCC3BB00E5F892 /* Locate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C515A328BCC3BB00E5F892 /* LocateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateApp.swift; sourceTree = "<group>"; };
 		24C515A528BCC3BB00E5F892 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240B36A528BCC7EA00E5AAB4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				240B36A328BCC7E400E5AAB4 /* AuthenticationView.swift */,
+				240B36A728BCC82B00E5AAB4 /* TermsView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		240B36A628BCC7FD00E5AAB4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				240B36A528BCC7EA00E5AAB4 /* Authentication */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		24C5159728BCC3BB00E5F892 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +78,7 @@
 			children = (
 				24C515A328BCC3BB00E5F892 /* LocateApp.swift */,
 				24C515A528BCC3BB00E5F892 /* ContentView.swift */,
+				240B36A628BCC7FD00E5AAB4 /* Screens */,
 				24C515B528BCC41400E5F892 /* Views */,
 				24C515B128BCC3F900E5F892 /* Utilities */,
 				24C515A728BCC3BD00E5F892 /* Assets.xcassets */,
@@ -179,6 +201,8 @@
 				24C515A628BCC3BB00E5F892 /* ContentView.swift in Sources */,
 				24C515B828BCC41400E5F892 /* BackgroundView.swift in Sources */,
 				24C515A428BCC3BB00E5F892 /* LocateApp.swift in Sources */,
+				240B36A828BCC82B00E5AAB4 /* TermsView.swift in Sources */,
+				240B36A428BCC7E400E5AAB4 /* AuthenticationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
