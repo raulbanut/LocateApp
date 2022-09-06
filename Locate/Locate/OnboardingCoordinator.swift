@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct OnboardingCoordinator: View {
-    @EnvironmentObject var coordinator : Coordinator
-    
-    var body: some View {
-        Button {
-            coordinator.addView(for: .home)
-        } label: {
-            Text("Onboarding")
-                .background(.yellow)
-        }
-
-    }
-}
-
-struct OnboardingCoordinator_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingCoordinator()
-    }
-}
+//struct OnboardingCoordinator: View {
+//    @EnvironmentObject var coordinator : Coordinator
+//    
+//    var body: some View {
+//        Button {
+//            coordinator.addView(for: .register)
+//        } label: {
+//            Text("Onboarding")
+//                .background(.yellow)
+//        }
+//
+//    }
+//}
+//
+//struct OnboardingCoordinator_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnboardingCoordinator()
+//    }
+//}
