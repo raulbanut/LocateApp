@@ -12,23 +12,39 @@ struct RegisterView: View {
     
     var body: some View {
         ZStack {
-//            BackgroundView()
+            //            BackgroundView()
             Color.pewterBlue
                 .edgesIgnoringSafeArea(.all)
             
-            TextFieldView(field: $field, textFieldType: .email)
-                .padding()
-//
-//            VStack(alignment: .leading) {
-//                TextField("Your email", text: $field)
-//                    .foregroundColor(.pewterBlue)
-//                    .background(.white)
-//
-//                Text("What's your email?")
+            VStack(spacing: 0) {
+                Text("What's your email?")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
 //                    .background(.yellow)
-//                    .frame(maxWidth: .infinity)
-//            }
-//            .background(.green)
+                
+                
+                TextFieldView(field: $field, textFieldType: .email)
+//                    .padding(.horizontal)
+                    .padding()
+//                    .background(.green)
+                
+                Spacer()
+            }
+            
+            //
+            //            VStack(alignment: .leading) {
+            //                TextField("Your email", text: $field)
+            //                    .foregroundColor(.pewterBlue)
+            //                    .background(.white)
+            //
+            //                Text("What's your email?")
+            //                    .background(.yellow)
+            //                    .frame(maxWidth: .infinity)
+            //            }
+            //            .background(.green)
         }
     }
 }
