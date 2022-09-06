@@ -17,17 +17,22 @@ struct TextFieldView: View {
     var textFieldType: TextFieldType
     
     var body: some View {
-        pickTextField(textFieldType)
-            .foregroundColor(.cedarChest)
+        inputField
+            .fontWeight(.semibold)
+            .foregroundColor(.pewterBlue)
             .font(.title3)
-            .textFieldStyle(.roundedBorder)
             .autocorrectionDisabled()
             .textInputAutocapitalization(.never)
+            .padding()
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.white)
+            }
     }
     
     @ViewBuilder
-    func pickTextField(_ textField: TextFieldType) -> some View {
-        if textField == .password {
+    var inputField: some View {
+        if textFieldType == .password {
             SecureField("Your Password", text: $field)
         } else {
             TextField("Your Email", text: $field)
