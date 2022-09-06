@@ -25,7 +25,7 @@ struct ButtonView: View {
                 Spacer()
             }
         }
-        .font(.system(size: 16))
+        .font(.system(size: 18))
         .frame(maxWidth: .infinity)
         .foregroundColor(.white)
         .padding(.vertical, 16)
