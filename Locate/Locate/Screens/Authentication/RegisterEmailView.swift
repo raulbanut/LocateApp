@@ -23,7 +23,7 @@ struct RegisterEmailView: View {
                 TopBarView(
                     text: "Log in",
                     textColor: .white,
-                    color: .white,
+                    color: .pewterBlue,
                     callback: {
                         coordinator.popView()
                     })

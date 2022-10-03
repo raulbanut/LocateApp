@@ -14,7 +14,7 @@ struct TopBarView: View {
     let callback: () -> Void
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             ZStack(alignment: .topLeading) {
                 Text(text)
                     .foregroundColor(textColor)
@@ -36,7 +36,7 @@ struct TopBarView: View {
             .padding()
             
             Rectangle()
-                .frame(height: 1.5)
+                .frame(height: 1)
                 .foregroundColor(.black.opacity(0.3))
         }
         .background(color)
