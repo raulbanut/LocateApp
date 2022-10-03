@@ -8,16 +8,16 @@
 import Foundation
 import SwiftUI
 
-enum Destinations: Hashable {
+enum AuthenticationDestinations: Hashable {
     case login
     case registerEmail
     case registerPassword
 }
 
-class Coordinator: ObservableObject {
+class AuthCoordinator: ObservableObject {
     @Published var navigationPath = NavigationPath() // private(set)
 
-    func pushView(for destination: Destinations) {
+    func pushView(for destination: AuthenticationDestinations) {
         navigationPath.append(destination)
     }
     

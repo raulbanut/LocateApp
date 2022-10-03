@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterEmailView: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @EnvironmentObject var coordinator : AuthCoordinator
     
     @ObservedObject var viewModel : RegisterViewModel
     

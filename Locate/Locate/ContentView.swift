@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var coordinator = Coordinator()
+    @StateObject var coordinator = AuthCoordinator()
     
     private var registerViewModel = RegisterViewModel()
 
@@ -19,7 +19,7 @@ struct ContentView: View {
                 onLoginEmail: { print("Login with Email") }
             )
             .environmentObject(coordinator)
-            .navigationDestination(for: Destinations.self) { item in
+            .navigationDestination(for: AuthenticationDestinations.self) { item in
                 if item == .registerEmail {
                     RegisterEmailView(viewModel: registerViewModel)
                         .hideNavigationBar()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterPasswordView: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @EnvironmentObject var coordinator : AuthCoordinator
     
     @ObservedObject var viewModel : RegisterViewModel
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthenticationView: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @EnvironmentObject var coordinator : AuthCoordinator
     
     @State private var buttonIsPressed = false
     @State private var registerButtonIsPresent = true
