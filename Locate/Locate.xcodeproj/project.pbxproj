@@ -10,6 +10,7 @@
 		240B36A428BCC7E400E5AAB4 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B36A328BCC7E400E5AAB4 /* AuthenticationView.swift */; };
 		240B36A828BCC82B00E5AAB4 /* Terms+AlreadyAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B36A728BCC82B00E5AAB4 /* Terms+AlreadyAccountView.swift */; };
 		2482AD0628C6148D00EECB8B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482AD0528C6148D00EECB8B /* Coordinator.swift */; };
+		248482CD28EB655B006FB565 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248482CC28EB655B006FB565 /* Logger.swift */; };
 		24B9E28828D640B600E9EC89 /* PreviewDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9E28728D640B600E9EC89 /* PreviewDevice+Extensions.swift */; };
 		24C515A428BCC3BB00E5F892 /* LocateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C515A328BCC3BB00E5F892 /* LocateApp.swift */; };
 		24C515A628BCC3BB00E5F892 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C515A528BCC3BB00E5F892 /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 		240B36A328BCC7E400E5AAB4 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		240B36A728BCC82B00E5AAB4 /* Terms+AlreadyAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Terms+AlreadyAccountView.swift"; sourceTree = "<group>"; };
 		2482AD0528C6148D00EECB8B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		248482CC28EB655B006FB565 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		24B9E28728D640B600E9EC89 /* PreviewDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewDevice+Extensions.swift"; sourceTree = "<group>"; };
 		24C515A028BCC3BB00E5F892 /* Locate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C515A328BCC3BB00E5F892 /* LocateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateApp.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				24C515B228BCC3F900E5F892 /* Extensions */,
+				248482CC28EB655B006FB565 /* Logger.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				24E4860D28BD364E0017A521 /* BackgroundBody.swift in Sources */,
 				24D5E29028CE715800F210AE /* RegisterPasswordView.swift in Sources */,
 				24D5E29228CE78DC00F210AE /* MenuView.swift in Sources */,
+				248482CD28EB655B006FB565 /* Logger.swift in Sources */,
 				24B9E28828D640B600E9EC89 /* PreviewDevice+Extensions.swift in Sources */,
 				24E4860F28BD36B90017A521 /* PrimaryButton.swift in Sources */,
 				24D5E28C28CD29DF00F210AE /* RegisterViewModel.swift in Sources */,
