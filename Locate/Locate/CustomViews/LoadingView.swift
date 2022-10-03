@@ -9,6 +9,9 @@ import SwiftUI
 
 struct LoadingView: View {
     @State private var isAnimating = false
+    
+    var viewOpacity = 0.0
+    var backgroundColor: Color = .gray
 
     var animation : Animation {
         Animation.spring(response: 0.45, dampingFraction: 0.25).repeat(while: isAnimating)
@@ -39,9 +42,9 @@ struct LoadingView: View {
     
     var body: some View {
         ZStack {
-//            Color.gray
-//                .opacity(0.3)
-//                .edgesIgnoringSafeArea(.all)
+            backgroundColor
+                .opacity(viewOpacity)
+                .edgesIgnoringSafeArea(.all)
             
             HStack(spacing: 32) {
                 ForEach(items, id:\.self) { item in

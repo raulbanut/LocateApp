@@ -1,5 +1,5 @@
 //
-//  TextFieldView.swift
+//  CustomTextField.swift
 //  Locate
 //
 //  Created by Raul Banut on 31.08.2022.
@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-enum TextFieldType {
-    case email, password
+extension CustomTextField {
+    enum TextFieldType {
+        case email, password
+    }
 }
 
-struct TextFieldView: View {
-    @Binding var field: String
+struct CustomTextField: View {
+    @Binding var text: String
     
-    var textFieldType: TextFieldType
+    var type: TextFieldType
     
     var body: some View {
         inputField
@@ -32,16 +34,16 @@ struct TextFieldView: View {
     
     @ViewBuilder
     var inputField: some View {
-        if textFieldType == .password {
-            SecureField("Your Password", text: $field)
+        if type == .password {
+            SecureField("Your Password", text: $text)
         } else {
-            TextField("Your Email", text: $field)
+            TextField("Your Email", text: $text)
         }
     }
 }
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldView(field: .constant("banut.raul@yahoo.com"), textFieldType: .email)
+        CustomTextField(text: .constant("banut.raul@yahoo.com"), type: .email)
     }
 }

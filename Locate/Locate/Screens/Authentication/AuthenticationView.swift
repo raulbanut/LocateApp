@@ -13,8 +13,8 @@ struct AuthenticationView: View {
     @State private var buttonIsPressed = false
     @State private var registerButtonIsPresent = true
     
-    var loginGoogle: () -> Void
-    var loginEmail: () -> Void
+    var onLoginGoogle: () -> Void
+    var onLoginEmail: () -> Void
     
     var body: some View {
         ZStack {
@@ -29,6 +29,7 @@ struct AuthenticationView: View {
                     .bold()
                     .foregroundColor(.cedarChest)
                     .font(.largeTitle)
+                    .frame(maxHeight: .infinity)
                 
                 Image(systemName: "globe.europe.africa.fill")
                     .font(.system(size: 200))
@@ -49,14 +50,22 @@ struct AuthenticationView: View {
     
     var buttons: some View {
         VStack(spacing: 8) {
-            ButtonView(text: "Continue with Google", image: Image(systemName: "g.square.fill")) {
+            PrimaryButton(
+                text: "Continue with Google",
+                image: Image(systemName: "g.square.fill"),
+                buttonColor: .black
+            ) {
                 buttonIsPressed = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     buttonIsPressed = false
                 }
             }
             
-            ButtonView(text: "Continue with Apple", image: Image(systemName: "applelogo")) {
+            PrimaryButton(
+                text: "Continue with Apple",
+                image: Image(systemName: "applelogo"),
+                buttonColor: .black
+            ) {
                 buttonIsPressed = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     buttonIsPressed = false
@@ -64,12 +73,16 @@ struct AuthenticationView: View {
             }
             
             if registerButtonIsPresent {
-                ButtonView(text: "Continue with Email", image: Image(systemName: "envelope.fill")) {
+                PrimaryButton(
+                    text: "Continue with Email",
+                    image: Image(systemName: "envelope.fill"),
+                    buttonColor: .black
+                ) {
                     buttonIsPressed = true
                     DispatchQueue.main.asyncAfter(deadline: .now() ) {
                         buttonIsPressed = false
-                        loginEmail()
-                        coordinator.addView(for: .register)
+                        onLoginEmail()
+                        coordinator.pushView(for: .registerEmail)
                     }
                 }
             }
@@ -80,7 +93,7 @@ struct AuthenticationView: View {
 
 struct AuthenticationView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationView(loginGoogle: { }, loginEmail: { })
+        AuthenticationView(onLoginGoogle: { }, onLoginEmail: { })
     }
 }
 

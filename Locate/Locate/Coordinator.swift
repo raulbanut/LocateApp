@@ -10,18 +10,18 @@ import SwiftUI
 
 enum Destinations: Hashable {
     case login
-    case register
+    case registerEmail
+    case registerPassword
 }
 
 class Coordinator: ObservableObject {
-    @Published var navigationPath = NavigationPath()
-    
-//    init() {
-//        print("Am intrat pe aici")
-//        self.addView(for: .login)
-//    }
-    
-    func addView(for destination: Destinations) {
+    @Published var navigationPath = NavigationPath() // private(set)
+
+    func pushView(for destination: Destinations) {
         navigationPath.append(destination)
+    }
+    
+    func popView() {
+        navigationPath.removeLast()
     }
 }
