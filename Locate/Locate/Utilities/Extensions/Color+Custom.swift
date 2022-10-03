@@ -15,4 +15,8 @@ extension Color {
     static let rhythm = Color("Rhythm")
     
     static let pewterBlue = Color("Pewter_Blue")
+    
+    static let tuscanRed = Color("Tuscan_Red")
+    
+    static let teaGreen = Color("Tea_Green")
 }

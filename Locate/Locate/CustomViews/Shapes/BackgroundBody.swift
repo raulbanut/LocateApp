@@ -1,13 +1,14 @@
 //
-//  BackgroundView.swift
+//  BackgroundBody.swift
 //  Locate
 //
-//  Created by Raul Banut on 24.08.2022.
+//  Created by Raul Banut on 29.08.2022.
 //
 
+import Foundation
 import SwiftUI
 
-struct PinBody: Shape {
+struct BackgroundBody: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -59,21 +60,5 @@ struct PinBody: Shape {
         
         path.closeSubpath()
         return path
-    }
-}
-
-struct BackgroundView: View {
-    var color: Color
-    
-    var body: some View {
-        PinBody()
-            .foregroundColor(color)
-            .ignoresSafeArea()
-    }
-}
-
-struct BackgroundView_Previews: PreviewProvider {
-    static var previews: some View {
-        BackgroundView(color: .pewterBlue)
     }
 }
